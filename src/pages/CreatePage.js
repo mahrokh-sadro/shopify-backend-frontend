@@ -12,7 +12,7 @@ const CreatePage = ({ items }) => {
   });
   console.log(data);
   const createItem = (evt) => {
-    fetch(`http://localhost:5000/items`, {
+    fetch(`https://shopify-backend-backend-.mahrokh.repl.co/items`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

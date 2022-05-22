@@ -41,13 +41,16 @@ const DeletePage = ({ items }) => {
   };
 
   const unDeleteItem = () => {
-    fetch(`http://localhost:5000/items/undelete/${deletedValue.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...deletedValue, is_deleted: false }),
-    })
+    fetch(
+      `https://shopify-backend-backend-.mahrokh.repl.co/items/undelete/${deletedValue.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...deletedValue, is_deleted: false }),
+      }
+    )
       .then((response) => response.json())
       .then((json) => {
         //   alert(json.message);

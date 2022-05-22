@@ -11,7 +11,7 @@ const App = () => {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch(`https://shopify-backend-backend-.mahrokh.repl.co/items`)
       .then((response) => response.json())
       .then((data) => setItems(data.data))
       .catch((err) => console.log(err));

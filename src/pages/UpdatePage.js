@@ -13,14 +13,17 @@ const UpdatePage = ({ items }) => {
 
   const updateItem = (evt) => {
     // evt.preventDefault();
-    fetch(`http://localhost:5000/items/${item._id}`, {
-      method: "PUT",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...item }),
-    })
+    fetch(
+      `https://shopify-backend-backend-.mahrokh.repl.co/items/${item._id}`,
+      {
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...item }),
+      }
+    )
       .then((res) => {
         res.json();
         // console.log("rerendred");
